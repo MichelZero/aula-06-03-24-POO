@@ -6,9 +6,11 @@
 # 1. Força de atrito estática:
 #     * Coeficiente de atrito estático: mu_s
 #     * Força máxima de atrito estática: F_fs = mu_s * N
+
 # 2. Força de atrito cinética:
 #     * Coeficiente de atrito cinético: mu_k
 #     * Força de atrito cinética: F_fk = mu_k * N
+
 # 3. Casos:
 #  * Objeto em repouso:
 #    * Se F < F_fs, o objeto permanece em repouso.
@@ -46,3 +48,18 @@ def forca_atrito_cinetica(mu_k, N):
   """
   return mu_k * N
 
+
+def coeficiente_atrito_cinetico(F, m, a):
+  """
+  Calcula o coeficiente de atrito cinético.
+
+  Argumentos:
+    F: Força aplicada.
+    m: Massa do objeto.
+    a: Aceleração do objeto.
+
+  Retorno:
+    Coeficiente de atrito cinético.
+  """
+  Fa = m * a + F
+  return Fa / (m * 9.8)
