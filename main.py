@@ -18,6 +18,8 @@ a = 0
 # u = ?' # coeficiente de atrito cinético
 
 # F - Fa = m * a
-Fa = m * a + F
-u = Fa / (m * 9.8) 
+# Fa = m * a + F
+# u = Fa / (m * 9.8) # sem função
+# com função abaixo
+u = coeficiente_atrito_cinetico(F, m, a)
 print(f"O coeficiente de atrito cinético é {u}")
